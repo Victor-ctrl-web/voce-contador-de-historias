@@ -1,6 +1,6 @@
 # Você, Contador de Histórias
-Você, Contador de Histórias é uma interface para criação de histórias com uma estrutura simples. Foi desenvolvida imitando a mesa de trabalho de um autor.
+Você, Contador de Histórias é uma interface com uma estrutura simples feita para você soltar aquelas ideias de autor que explodem em sua cabeça como um Big Bang!
 ## Caderno
-Onde a história é registrada, também possui uma ferramenta para informar o cenário e o tempo qual a história ocorre.
+Empolgue-se com o desenvolver da sua própria história, lendo e re-lendo suas narrações e os diálogos dos seus personagens, com um design semelhante à um aplicativo de mensagens instantâneas. Não se esqueça de mencionar quando e onde tudo está acontecendo.
 ## Caneta
-A caneta possui três funcionalidades: Gerenciar os personagens, decidir entre uma descrição ou a fala de um personagem e registrá-la no caderno.
+Você pode gerenciar seus personagens, escrever o que vão falar e quais emoções estão transmitindo, você também pode aparecer, mencionando aqueles detalhes que fazem toda a diferença na história.
