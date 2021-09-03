@@ -1,5 +1,5 @@
 # Você, Contador de Histórias
-Você, Contador de Histórias é uma interface com uma estrutura simples feita para você soltar aquelas ideias de autor que explodem em sua cabeça como um Big Bang!
+Você, Contador de Histórias é uma interface com uma estrutura simples feita para você soltar aquelas ideias de autor que explodem a sua cabeça!
 ## Caderno
 Empolgue-se com o desenvolver da sua própria história, lendo e re-lendo suas narrações e os diálogos dos seus personagens, com um design semelhante à um aplicativo de mensagens instantâneas. Não se esqueça de mencionar quando e onde tudo está acontecendo.
 ## Caneta
