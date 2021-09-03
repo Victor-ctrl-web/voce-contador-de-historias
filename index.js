@@ -13,10 +13,10 @@ document.getElementById("NewPerson").onkeydown = function(a) {
         AddPerson();
     }
 }
-
 function SendDialog() {
     switch (document.getElementById("Choose").value) {
         case "Falar":
+            var Select = document.getElementById("Person").selectedIndex;
             var Person = document.getElementById("Person").value;
             document.getElementById("Person").value = "";
             var ChooseText = document.getElementById("ChooseText").value;
@@ -26,6 +26,8 @@ function SendDialog() {
             var Emote = document.getElementById("Emote").value;
             var btn = document.createTextNode(Person);
             var btn1 = document.createTextNode(ChooseText);
+            var elem = document.getElementById('AutoScroll');
+            document.getElementById('Person').getElementsByTagName('option')[Select].selected = 'selected';
             node.appendChild(btn);
             node1.appendChild(btn1);
             document.getElementById("Dialog").appendChild(node);
@@ -35,7 +37,7 @@ function SendDialog() {
             } else if (Emote == "Neutro") {
                 document.getElementById("Dialog").lastChild.style.color = "black";
             } else if (Emote == "Feliz") {
-                document.getElementById("Dialog").lastChild.style.color = "yellow";
+                document.getElementById("Dialog").lastChild.style.color = "Gold";
             } else if (Emote == "Triste") {
                 document.getElementById("Dialog").lastChild.style.color = "blue";
             } else if (Emote == "Irado") {
@@ -53,19 +55,52 @@ function SendDialog() {
             } else if (Emote == "Assustado") {
                 document.getElementById("Dialog").lastChild.style.color = "MidnightBlue";
             } else if (Emote == "Orgulhoso") {
-                document.getElementById("Dialog").lastChild.style.color = "OrangeRed";
-            } else if (Emote == "Repulsa") {
+                document.getElementById("Dialog").lastChild.style.color = "Orange";
+            } else if (Emote == "Enojado") {
                 document.getElementById("Dialog").lastChild.style.color = "Green";
             }
+            if (Select % 2 == 1) {
+                node.style.textAlign = "left";
+                document.getElementById("Dialog").lastChild.style.marginLeft = "10px";
+                document.getElementById("Dialog").lastChild.style.paddingLeft = "10px";
+                node.style.marginLeft = "10px";
+                document.getElementById("Dialog").lastChild.style.border = "1px solid white";
+                document.getElementById("Dialog").lastChild.style.width = "50%";
+                document.getElementById("Dialog").lastChild.style.backgroundColor = "white";
+                document.getElementById("Dialog").lastChild.style.borderRadius = "10px 10px 10px 0px";
+                document.getElementById("Dialog").lastChild.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+            } else {
+                document.getElementById("Dialog").lastChild.style.textAlign = "right";
+                document.getElementById("Dialog").lastChild.style.marginRight = "10px";
+                document.getElementById("Dialog").lastChild.style.marginLeft = "auto";
+                document.getElementById("Dialog").lastChild.style.paddingRight = "10px";
+                node.style.textAlign = "right";
+                node.style.marginRight = "10px";
+                node.style.marginLeft = "auto";
+                document.getElementById("Dialog").lastChild.style.border = "1px solid white";
+                document.getElementById("Dialog").lastChild.style.backgroundColor = "white";
+                document.getElementById("Dialog").lastChild.style.borderRadius = "10px 10px 0px 10px";
+                document.getElementById("Dialog").lastChild.style.width = "50%";
+                document.getElementById("Dialog").lastChild.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+            }
+            elem.scrollTop = elem.scrollHeight;
             break;
         case "Narrar":
             var ChooseText = document.getElementById("ChooseText").value;
             document.getElementById("ChooseText").value = "";
             var node = document.createElement("p");
             var btn = document.createTextNode(ChooseText);
+            var elem = document.getElementById('AutoScroll');
             node.appendChild(btn);
             document.getElementById("Dialog").appendChild(node);
-            document.getElementById("Dialog").lastChild.style.color = "black";
+            document.getElementById("Dialog").lastChild.style.textAlign = "center";
+            document.getElementById("Dialog").lastChild.style.border = "1px solid white";
+            document.getElementById("Dialog").lastChild.style.backgroundColor = "white";
+            document.getElementById("Dialog").lastChild.style.borderRadius = "10px";
+            document.getElementById("Dialog").lastChild.style.marginLeft = "10px";
+            document.getElementById("Dialog").lastChild.style.marginRight = "10px";
+            document.getElementById("Dialog").lastChild.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+            elem.scrollTop = elem.scrollHeight;
             break;
     }
 }
@@ -78,19 +113,22 @@ function ChangeCenary() {
     var node = document.createElement("p");
     var node1 = document.createElement("h3");
     var btn = document.createTextNode(Cenary + ", " + Time);
-    node.appendChild(node1);
-    node1.appendChild(btn);
-    document.getElementById("Dialog").appendChild(node);
-    document.getElementById("Dialog").lastChild.style.color = "black";
-}
-window.setInterval(function() {
     var elem = document.getElementById('AutoScroll');
+    node1.appendChild(btn);
+    document.getElementById("Dialog").appendChild(node1);
+    document.getElementById("Dialog").lastChild.style.color = "black";
+    document.getElementById("Dialog").lastChild.style.textAlign = "center";
+    document.getElementById("Dialog").lastChild.style.border = "1px solid white";
+    document.getElementById("Dialog").lastChild.style.backgroundColor = "white";
+    document.getElementById("Dialog").lastChild.style.borderRadius = "10px";
+    document.getElementById("Dialog").lastChild.style.marginLeft = "10px";
+    document.getElementById("Dialog").lastChild.style.marginRight = "10px";
+    document.getElementById("Dialog").lastChild.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
     elem.scrollTop = elem.scrollHeight;
-}, 100);
+}
 
 function AddPerson() {
     var Person = document.getElementById("NewPerson").value;
-    document.getElementById("NewPerson").value = "";
     var node = document.createElement("option");
     var node1 = document.getElementById("Person");
     var btn = document.createTextNode(Person);

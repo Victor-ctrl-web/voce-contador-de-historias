@@ -8,11 +8,13 @@
     <meta charset="UTF-8" />
     <style>
         body {
-            background-color: #cdcdcd;
+            margin: 0;
         }
 
         * {
+            font-weight: bold;
             font-family: Century Gothic;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -23,14 +25,13 @@
         <h3>
             Caderno
             <span style="float:right;margin-right:20px">
-                <input type="text" id="Title" placeholder="Título da história..." />
-				Cenário:
-                <input type="text" id="Cenary" />
-                Tempo:
-                <input type="text" id="Time" />
-                <button onclick="ChangeCenary()">
-                    Enviar
-                </button>
+                    Cenário:
+                    <input type="text" id="Cenary" />
+                    Tempo:
+                    <input type="text" id="Time" />
+                    <button type="submit">
+                        Enviar
+                    </button>
             </span>
         </h3>
         <hr />
@@ -43,49 +44,50 @@
             Caneta
             <span style="float:right;margin-right:20px">
                 <button onclick="UnsetChild()">
-                    Desfazer 
+                    Desfazer
                 </button>
             </span>
         </h3>
         <hr />
-        <hr />
-        <div id="Can">
-            <select id="Person" style="width:110px">
-                <option selected disabled>Personagens</option>
-            </select>
-            <input type="text" id="NewPerson" size="10" />
-            <button onclick="AddPerson()">
-                +
-            </button>
-            <button onclick="RemPerson()">
-                -
-            </button>
-            <select id="Choose">
-                <option>Falar</option>
-                <option>Narrar</option>
-            </select>
-            <select id="Emote">
-                <option>Neutro</option>
-                <option>Feliz</option>
-                <option>Irado</option>
-                <option>Triste</option>
-                <option>Surpreso</option>
-                <option>Animado</option>
-                <option>Inspirado</option>
-                <option>Constrangido</option>
-                <option>Entediado</option>
-                <option>Decepcionado</option>
-                <option>Assustado</option>
-                <option>Orgulhoso</option>
-                <option>Enojado</option>
-            </select>
-            <input type="text" id="ChooseText" size="123" />
-            <button onclick="SendDialog()">
-                Enviar
-            </button>
-        </div>
-        <hr />
     </div>
+    <hr />
+    <div id="Can">
+        <select id="Person" style="width:110px">
+            <option disabled>Personagens</option>
+        </select>
+        <input type="text" id="NewPerson" size="10" />
+        <button onclick="AddPerson()">
+            +
+        </button>
+        <button onclick="RemPerson()">
+            -
+        </button>
+        <select id="Choose">
+            <option>Falar</option>
+            <option>Narrar</option>
+        </select>
+        <select id="Emote">
+            <option>Neutro</option>
+            <option>Feliz</option>
+            <option>Irado</option>
+            <option>Triste</option>
+            <option>Surpreso</option>
+            <option>Animado</option>
+            <option>Inspirado</option>
+            <option>Constrangido</option>
+            <option>Entediado</option>
+            <option>Decepcionado</option>
+            <option>Assustado</option>
+            <option>Orgulhoso</option>
+            <option>Enojado</option>
+        </select>
+        <input type="text" id="ChooseText" size="123" required />
+        <button onclick="SendDialog()">
+            Enviar
+        </button>
+    </div>
+    <hr />
     <script src="index.js"></script>
 </body>
+
 </html>
